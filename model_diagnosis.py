@@ -23,6 +23,8 @@ from tensorflow.keras.layers import Dense, Dropout
 file_path = 'train.csv'  # Update this path with your actual file location
 data = pd.read_csv(file_path)
 
+print(data)
+
 # One-hot encode `class_id` to represent symptoms, including "No finding"
 class_id_encoded = pd.get_dummies(data['class_id'], prefix='class')
 # Merge the one-hot encoded columns back with the original dataframe to maintain the 'image_id'
@@ -52,10 +54,10 @@ model = Sequential([
     Dense(1, activation='sigmoid')  # Assuming binary classification, adjust if your task is multi-label
 ])
 
-model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+#model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
 # Train the model on the dataset
-model.fit(X_train, y_train, validation_data=(X_val, y_val), epochs=10, batch_size=32)
+#model.fit(X_train, y_train, validation_data=(X_val, y_val), epochs=10, batch_size=32)
 
 # Note: This example uses a simplified target variable and assumes binary classification.
 # In practice, you'll need to adjust the target variable preparation and model architecture
