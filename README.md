@@ -23,5 +23,5 @@ Once symptoms are highlighted, the tool will proceed to take in the known sympto
 
 Blud thinks he's part of the Mystery Gang, dogs out!!! <br />
 
-![56595c52331271f95c2602b2b0b374fc](https://github.com/Project-Code-UVA/CliniVision/assets/123980270/1d3df08b-3cca-4ecf-8d9e-d5723c291796) <br />
+![image](https://github.com/Project-Code-UVA/CliniVision/assets/123980270/9f34c7b1-1a30-4814-9a11-eae7f53613bb) <br />
 
