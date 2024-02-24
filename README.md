@@ -19,4 +19,4 @@ The CliniVision tool's final goal is to take in a fresh postanterior chest x-ray
 13 - Pulmonary fibrosis <br />
 14 - No finding <br />
 
-\nOnce symptoms are highlighted, the tool will proceed to take in the known symptoms and their location, and assign a proper diagnosis for the x-ray input.
+Once symptoms are highlighted, the tool will proceed to take in the known symptoms and their location, and assign a proper diagnosis for the x-ray input.
