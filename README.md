@@ -25,4 +25,3 @@ Blud thinks he's part of the Mystery Gang, dogs out!!! <br />
 
 ![56595c52331271f95c2602b2b0b374fc](https://github.com/Project-Code-UVA/CliniVision/assets/123980270/1d3df08b-3cca-4ecf-8d9e-d5723c291796) <br />
 
-![image](https://github.com/Project-Code-UVA/CliniVision/assets/123980270/2ff324b4-9913-4c05-b95f-7c6843d788fd)
