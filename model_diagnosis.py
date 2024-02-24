@@ -26,12 +26,15 @@ from tensorflow.keras.utils import to_categorical
 # multiinput model that takes symptom and bounding box/area into account 
 # assuming that the train.csv 
 
-## Load the dataset
-file_path = 'R:/CliniVision/CliniVision/train.csv'  # Ensure this path is correct
-data = pd.read_csv(file_path)
+# Load the dataset
+file_path = 'R:/CliniVision/CliniVision/train.csv'
+data = pd.read_csv(file_path, dtype={'x_min': float, 'y_min': float, 'x_max': float, 'y_max': float}, low_memory=False)
 
-# Preprocess and prepare features
-symptom_types = pd.get_dummies(data['class_id'], prefix='type')
+# Alternatively, convert columns to numeric after loading
+for column in ['x_min', 'x_max', 'y_min', 'y_max']:
+    data[column] = pd.to_numeric(data[column], errors='coerce')
+
+# Now, compute 'area' and 'aspect_ratio' safely
 data['area'] = (data['x_max'] - data['x_min']) * (data['y_max'] - data['y_min'])
 data['aspect_ratio'] = (data['x_max'] - data['x_min']) / (data['y_max'] - data['y_min'])
 features = pd.concat([symptom_types, data[['area', 'aspect_ratio']]], axis=1)
