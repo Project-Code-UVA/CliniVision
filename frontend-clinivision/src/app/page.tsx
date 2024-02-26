@@ -36,7 +36,7 @@ export default function Home() {
       </div>
 
       <footer className="text-sm text-gray-600 mt-auto py-4">
-        Sponsored by Rishi Sureshkumar, Pre-Med Computer Science Major at the University of Virginia.
+        Sponsored by Project Code at the University of Virginia
       </footer>
     </div>
   );
