@@ -19,7 +19,6 @@ export default function Home() {
       <img src='jaren.jpg' className="App-logo mb-20 mt-5" alt="logo" />
       <header className="text-center mb-8">
         <h1 className="text-3xl font-bold">CLINIVISION</h1>
-        <p className="text-sm text-gray-600">Presented by Jaren Bresnick's Project Code</p>
       </header>
 
       <div className="w-96 bg-white shadow-md rounded-lg overflow-hidden mb-10">
