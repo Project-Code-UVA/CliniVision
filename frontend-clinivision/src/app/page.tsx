@@ -16,9 +16,9 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen bg-purple-100 justify-center items-center">
-      <img src='jaren.jpg' className="App-logo mb-20 mt-5" alt="logo" />
+      <img src='x-ray.jpg' className="App-logo mb-20 mt-5" alt="logo" />
       <header className="text-center mb-8">
-        <h1 className="text-3xl font-bold">CLINIVISION</h1>
+      <h1 className="text-7xl font-serif">CLINIVISION</h1>
       </header>
 
       <div className="w-96 bg-white shadow-md rounded-lg overflow-hidden mb-10">
