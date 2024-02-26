@@ -34,7 +34,7 @@ export default function Home() {
         {/* <DragDrop></DragDrop> */}
       </div>
       <h4 className="mt-5">
-        Sponsored by Rishi Sureshkumar, Pre-Med Computer Science Major at the University of Virginia.
+        Sponsored by Rishi Sureshkumar, Pre-Med Computer Science Major at the University of Virginia. 
       </h4>
     </div>
   );
