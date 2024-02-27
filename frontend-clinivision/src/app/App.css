@@ -1,35 +1,99 @@
-.App {
-  text-align: center;
-  background-color: #ca8adf;
-}
-
-.App-logo {
-  height: 30vmin;
-  pointer-events: none;
-}
-
-
-
-.App-header {
-  background-color: #ca8adf;
-  min-height: 30vh;
+.app {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logo {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.subtitle {
+  font-size: 1rem;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.card {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: black;
+  width: 100%;
+  max-width: 500px;
+}
+
+.card-title {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.dropzone {
+  border: 2px dashed #ddd;
+  padding: 2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
+
+.dropzone-active {
+  border-color: #2575fc;
+}
+
+.preview {
+  margin-top: 1rem;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.submit-btn {
+  background-color: #2575fc;
+  color: white;
+  width: 100%;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: background-color 0.25s;
+}
+
+.submit-btn:hover {
+  background-color: #195dd5;
+}
+
+.submit-btn:disabled {
+  background: #ccc;
+}
+
+.footer {
+  margin-top: auto;
+  padding: 1rem;
+  text-align: center;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
 }
