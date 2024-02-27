@@ -18,13 +18,11 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Navigation Bar */}
       <nav className="flex justify-between items-center p-4 bg-blue-500 text-white">
         <a href="/" className="text-lg font-semibold">Home</a>
         <a href="/login" className="text-lg font-semibold">Login</a>
       </nav>
 
-      {/* Content */}
       <div className="flex-grow flex flex-col justify-center items-center bg-purple-100">
         <div className="w-full flex flex-col items-center">
           <img src='logo.jpg' className="mb-5 w-24 h-24" alt="logo" />
