@@ -96,3 +96,16 @@ model.fit(X_train, y_train, validation_data=(X_val, y_val), epochs=10, batch_siz
 
 
 #----------------------------------------------------------------------------------------------------------------------------------------------------------------#
+
+# Daniel's implementation of SciKit-Learn's Decision Tree
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.metrics import accuracy_score
+import matplotlib.pyplot as plt
+from sklearn.tree import plot_tree
+
+# assuming rishi has already prepared the data and loaded it in
+
+clf = DecisionTreeClassifier()
+clf.fit(X_train, y_train)
+y_pred = clf.predict(X_val)
+print("Accuracy Score:", accuracy_score(y_val, y_pred))
