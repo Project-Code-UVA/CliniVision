@@ -18,17 +18,21 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <nav className="flex justify-between items-center p-4 bg-blue-500 text-white">
+    <nav className="flex justify-between items-center p-4 bg-blue-500 text-white">
+      <div className="flex gap-x-4"> 
         <a href="/" className="text-lg font-semibold">Home</a>
-        <a href="/login" className="text-lg font-semibold">Login</a>
-      </nav>
+        <a href="/about" className="text-lg font-semibold">About</a>
+      </div>
+      <a href="/login" className="text-lg font-semibold">Login</a>
+    </nav>
+
 
       <div className="flex flex-grow">
-        {/* Left Sidebar */}
+        
         <div className="w-1/5 bg-gray-400 min-h-full"></div>
         
-        {/* Main Content */}
-        <div className="flex-grow flex flex-col justify-center items-center bg-purple-100">
+        
+        <div className="flex-grow flex flex-col justify-center items-center bg-violet-300">
           <div className="w-full flex flex-col items-center">
             <img src='logo.jpg' className="mb-5 w-24 h-24" alt="logo" />
             <h1 className="text-5xl font-serif mb-2">CLINIVISION</h1>
@@ -50,7 +54,7 @@ export default function Home() {
           </div>
         </div>
       
-        {/* Right Sidebar */}
+        
         <div className="w-1/5 bg-gray-400 min-h-full"></div>
       </div>
 
