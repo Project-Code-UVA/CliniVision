@@ -16,6 +16,22 @@ export default function Home() {
 
   const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
 
+  const handleSubmit = async () => {
+    if (!file) return;
+    const formData = new FormData();
+    formData.append('file', file);
+    try {
+      const response = await fetch('http://127.0.0.1:8000/uploadfile/', {
+        method: 'POST',
+        body: formData,
+      });
+      const data = await response.json();
+      console.log(data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <div className="flex flex-col min-h-screen">
     <nav className="flex justify-between items-center p-4 bg-violet-500 text-white">
@@ -47,7 +63,9 @@ export default function Home() {
                 {isDragActive ? <p>Drop the files here ...</p> : <p>Drag 'n' drop some files here, or click to select files</p>}
                 {preview && <img src={preview} className="w-full h-auto rounded-md mt-4" alt="Preview" />}
               </div>
-              <button className="w-full bg-violet-500 text-white py-2 px-4 rounded-md hover:bg-violet-600 transition duration-150 ease-in-out" disabled={!file}>
+              <button className="w-full bg-violet-500 text-white py-2 px-4 rounded-md hover:bg-violet-600 transition duration-150 ease-in-out" disabled={!file}
+                onClick={handleSubmit}
+              >
                 Submit
               </button>
             </div>
