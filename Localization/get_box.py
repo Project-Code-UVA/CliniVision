@@ -1,28 +1,32 @@
 import pandas as pd
 from boxsdk import OAuth2, Client
+import ast
 
-csv_file_path = 'get_box.csv'
+csv_file_path = 'output.csv'
 
+CLIENT_ID = '' 
+CLIENT_SECRET = '' 
+ACCESS_TOKEN = ''   
+FOLDER_ID = '' 
 
-CLIENT_ID = 'YOUR_CLIENT_ID'
-CLIENT_SECRET = 'YOUR_CLIENT_SECRET'
-ACCESS_TOKEN = 'YOUR_ACCESS_TOKEN'  
-FOLDER_ID = 'YOUR_FOLDER_ID'  
 
 
 df = pd.read_csv(csv_file_path)
-image_ids = eval(df['Aortic enlargement'][0])  
+list_like_string = df.loc[0, 'image_id']
+image_ids = ast.literal_eval(list_like_string)
 
-# Authenticate with Box
+
 auth = OAuth2(client_id=CLIENT_ID, client_secret=CLIENT_SECRET, access_token=ACCESS_TOKEN)
 client = Client(auth)
 
-# Access the directory and filter files by the IDs from the CSV
+
 matching_files = []
 folder_items = client.folder(folder_id=FOLDER_ID).get_items()
 for item in folder_items:
-    if item.id in image_ids:
+    file_name_without_extension = item.name.split('.')[0]
+    if file_name_without_extension in image_ids:
         matching_files.append(item)
 
-print(matching_files)
 
+for matching_file in matching_files:
+    print(matching_file.name)
