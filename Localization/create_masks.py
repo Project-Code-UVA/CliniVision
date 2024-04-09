@@ -23,7 +23,7 @@ def process_directory(input_dir, output_dir):
             print(f"Created mask for: {image_filename}")
 
 
-input_dir = "Aortic_Enlargement_Images_PNG"  
-output_dir = "Aortic_Enlargement_Masks"  
+input_dir = "Aortic_Enlargement_Images_Cropped"  
+output_dir = "Aortic_Enlargement_Cropped_Masks"  
 
 process_directory(input_dir, output_dir)
