@@ -27,7 +27,7 @@ const Dropzone: React.FC = () => {
           }
           {preview && <img src={preview} className="w-full h-auto rounded-md mt-4" alt="Preview" />}
         </div>
-        <button className="w-full bg-violet-500 text-white py-2 px-4 rounded-md hover:bg-violet-600 transition duration-150 ease-in-out" disabled={!file}>
+        <button className="w-full bg-violet-600 text-white py-2 px-4 rounded-md hover:bg-violet-600 transition duration-150 ease-in-out" disabled={!file}>
           Submit
         </button>
       </div>
