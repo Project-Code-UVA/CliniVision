@@ -3,7 +3,7 @@ from PIL import Image
 from io import BytesIO
 
 weights = 'best.pt'
-model = torch.hub.load('ultralytics/yolov5', 'custom', path_or_model=weights)
+model = torch.hub.load('ultralytics/yolov5', 'custom', weights)
 
 def predict(image):
     model.eval()

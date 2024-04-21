@@ -21,4 +21,4 @@ async def process_image(file: UploadFile):
     mime_type = mimetypes.guess_type(file.filename)[0]
     
     bounding_boxes, labels = predict.predict(data)
-    return {"bounding_boxes": bounding_boxes, "labels": labels}
+    return {"bounding_boxes": bounding_boxes.tolist(), "labels": labels.tolist()}

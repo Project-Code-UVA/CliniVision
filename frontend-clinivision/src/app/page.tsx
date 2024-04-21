@@ -6,6 +6,7 @@ import { useDropzone } from 'react-dropzone';
 export default function Home() {
   const [file, setFile] = React.useState<File | null>(null);
   const [preview, setPreview] = React.useState<string>('');
+  const [predictions, setPredictions] = React.useState<any[]>([]);
 
   const onDrop = React.useCallback((acceptedFiles: File[]) => {
     const file = acceptedFiles[0];
@@ -27,6 +28,7 @@ export default function Home() {
       });
       const data = await response.json();
       console.log(data);
+      setPredictions(data.bounding_boxes);
     } catch (error) {
       console.error(error);
     }
@@ -70,6 +72,30 @@ export default function Home() {
               </button>
             </div>
           </div>
+
+          {predictions.length > 0 && (
+            <div className="mt-8">
+              <h2 className="text-2xl font-semibold mb-6 text-center">Predictions</h2>
+              <div className="relative">
+                {predictions.map((bbox, index) => (
+                  <div
+                    key={index}
+                    className="absolute border-2 border-red-500"
+                    style={{
+                      top: `${bbox[1]}%`,
+                      left: `${bbox[0]}%`,
+                      width: `${bbox[2] - bbox[0]}%`,
+                      height: `${bbox[3] - bbox[1]}%`,
+                    }}
+                  >
+                    <div className="bg-red-500 text-white text-xs px-1">
+                      {bbox[4]}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       
         
