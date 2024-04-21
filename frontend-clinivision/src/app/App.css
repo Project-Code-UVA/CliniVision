@@ -97,3 +97,19 @@
   background: rgba(255, 255, 255, 0.2);
   color: white;
 }
+
+/* Ensure that the video stays behind all other content */
+.z-negative {
+  z-index: -1;
+}
+
+/* Add overflow-hidden to the root to prevent any accidental overflow */
+.overflow-hidden {
+  overflow: hidden;
+}
+
+/* If not already present, you can ensure the z-index for the content that should be on top */
+.relative {
+  position: relative;
+  z-index: 10; /* This number should be higher than the video's z-index */
+}
