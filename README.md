@@ -21,3 +21,5 @@ The CliniVision tool's final goal is to take in a fresh postanterior chest x-ray
 
 Once symptoms are highlighted, the tool will proceed to take in the known symptoms and their location, and assign a proper diagnosis for the x-ray input. <br />
 
+
+<img width="1791" alt="Screenshot 2024-04-15 at 4 48 35 PM" src="https://github.com/Project-Code-UVA/CliniVision/assets/101993132/f0ba4f9e-8001-410c-9a51-d519c0258df8">
